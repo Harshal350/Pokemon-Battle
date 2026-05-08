@@ -59,7 +59,7 @@
 > 📽️ *Gameplay demonstration — battles, animations, and more!*
 
 <!-- Replace the src below with your actual GIF URL -->
-<img src="https://placehold.co/800x450/1a1a2e/FFD700?text=🎮+Gameplay+Demo+GIF+Here" alt="Gameplay Demo" width="800" style="border-radius: 12px;" />
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/demo.gif" alt="Gameplay Demo" width="800" style="border-radius: 12px;" />
 
 <br><br>
 
