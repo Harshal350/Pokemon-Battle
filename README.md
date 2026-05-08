@@ -74,7 +74,7 @@
 ## 📖 About The Project
 
 <div align="center">
-<img src="https://placehold.co/700x200/1a1a2e/FFD700?text=🔥+POKÉMON+BATTLE+GAME+🔥" alt="About Banner" width="700" />
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/Banner.png" alt="About Banner" width="700" />
 </div>
 
 <br>
