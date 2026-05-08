@@ -63,10 +63,6 @@
 
 <br><br>
 
-| Battle Screen | Attack Animation | Win Screen |
-|:---:|:---:|:---:|
-| <img src="https://placehold.co/240x160/16213e/FF6B6B?text=⚔️+Battle+Screen" width="240" alt="Battle Screen"/> | <img src="https://placehold.co/240x160/0f3460/FFD700?text=⚡+Attack+Animation" width="240" alt="Attack Animation"/> | <img src="https://placehold.co/240x160/1a1a2e/4CAF50?text=🏆+Win+Screen" width="240" alt="Win Screen"/> |
-
 </div>
 
 ---
@@ -252,12 +248,12 @@ open index.html
 
 <br>
 
-### ⚔️ Battle Screen
-<img src="" alt="Battle Screen" width="750" />
+### ⚔️ POKEMON SELECT
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/POKEMON%20SELECT.png" alt="Battle Screen" width="750" />
 
 <br>
 
-### 💥 Attack Animation
+### 💥 BATTEL SCENE 
 <img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/QUESTION.png" alt="Attack Animation" width="750" />
 
 <br>
