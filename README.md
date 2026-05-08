@@ -21,7 +21,7 @@
 
 <br>
 
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)](https://github.com//Harshal350)
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)](https://github.com/Harshal350)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -29,10 +29,10 @@
 
 <br>
 
-[![Stars](https://img.shields.io/github/stars/yourusername/pokemon-battle-game?style=social)](https://github.com/Harshal350/pokemon-battle-game/stargazers)
-[![Forks](https://img.shields.io/github/forks/yourusername/pokemon-battle-game?style=social)](https://github.com/yourusername/pokemon-battle-game/network/members)
-[![Issues](https://img.shields.io/github/issues/yourusername/pokemon-battle-game?color=red)](https://github.com/yourusername/pokemon-battle-game/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/yourusername/pokemon-battle-game?color=brightgreen)](https://github.com/yourusername/pokemon-battle-game/commits)
+[![Stars](https://img.shields.io/github/stars/Harshal350/Pokemon-Battle?style=social)](https://github.com/Harshal350/Pokemon-Battle/stargazers)
+[![Forks](https://img.shields.io/github/forks/Harshal350/Pokemon-Battle?style=social)](https://github.com/Harshal350/Pokemon-Battle/network/members)
+[![Issues](https://img.shields.io/github/issues/Harshal350/Pokemon-Battle?color=red)](https://github.com/Harshal350/Pokemon-Battle/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/Harshal350/Pokemon-Battle?color=brightgreen)](https://github.com/Harshal350/Pokemon-Battle/commits)
 
 <br>
 
@@ -40,9 +40,9 @@
 
 <br>
 
-[![▶ Play Now](https://img.shields.io/badge/▶%20PLAY%20NOW-FF0000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://yourusername.github.io/pokemon-battle-game)
-[![📁 View Source](https://img.shields.io/badge/📁%20VIEW%20SOURCE-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername/pokemon-battle-game)
-[![🐛 Report Bug](https://img.shields.io/badge/🐛%20REPORT%20BUG-orange?style=for-the-badge)](https://github.com/yourusername/pokemon-battle-game/issues)
+[![▶ Play Now](https://img.shields.io/badge/▶%20PLAY%20NOW-FF0000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://Harshal350.github.io/Pokemon-Battle)
+[![📁 View Source](https://img.shields.io/badge/📁%20VIEW%20SOURCE-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Harshal350/Pokemon-Battle)
+[![🐛 Report Bug](https://img.shields.io/badge/🐛%20REPORT%20BUG-orange?style=for-the-badge)](https://github.com/Harshal350/Pokemon-Battle/issues)
 
 </div>
 
@@ -169,10 +169,10 @@ Before you begin, make sure you have the following installed:
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/pokemon-battle-game.git
+git clone https://github.com/Harshal350/Pokemon-Battle.git
 
 # 2. Navigate into the project directory
-cd pokemon-battle-game
+cd Pokemon-Battle
 
 # 3. Open the game in your browser
 open index.html
@@ -193,7 +193,7 @@ open index.html
 
 > No installation needed! Just click below ⬇️
 
-[![▶ Play Live Demo](https://img.shields.io/badge/▶%20Play%20Live%20Demo-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://yourusername.github.io/pokemon-battle-game)
+[![▶ Play Live Demo](https://img.shields.io/badge/▶%20Play%20Live%20Demo-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://Harshal350.github.io/Pokemon-Battle)
 
 ---
 
@@ -276,7 +276,7 @@ open index.html
 ## 📁 Folder Structure
 
 ```
-pokemon-battle-game/
+Pokemon-Battle/
 │
 ├── 📄 index.html              # Main entry point
 ├── 📄 README.md               # You are here!
@@ -330,7 +330,7 @@ Here's what's on the roadmap for upcoming versions:
 - [ ] 🌍 **More Pokémon** — Expand the roster to all generations
 - [ ] 📱 **PWA Support** — Install as a Progressive Web App
 
-> 💡 Have an idea? [Open a feature request!](https://github.com/yourusername/pokemon-battle-game/issues/new?labels=enhancement)
+> 💡 Have an idea? [Open a feature request!](https://github.com/Harshal350/Pokemon-Battle/issues/new?labels=enhancement)
 
 ---
 
@@ -363,7 +363,7 @@ git push origin feature/AmazingFeature
 
 ### Contribution Guidelines
 
-- 🐛 **Bug Reports** → Use the [Issues](https://github.com/yourusername/pokemon-battle-game/issues) tab
+- 🐛 **Bug Reports** → Use the [Issues](https://github.com/Harshal350/Pokemon-Battle/issues) tab
 - 💡 **Feature Requests** → Tag your issue with `enhancement`
 - 🎨 **Code Style** → Follow the existing code style and naming conventions
 - 📝 **Commits** → Use descriptive commit messages with emojis *(e.g., `🐛 Fix health bar overflow`)*
@@ -371,8 +371,8 @@ git push origin feature/AmazingFeature
 
 <div align="center">
 
-[![Contributors](https://img.shields.io/github/contributors/yourusername/pokemon-battle-game?style=for-the-badge&color=brightgreen)](https://github.com/yourusername/pokemon-battle-game/graphs/contributors)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](https://github.com/yourusername/pokemon-battle-game/pulls)
+[![Contributors](https://img.shields.io/github/contributors/Harshal350/Pokemon-Battle?style=for-the-badge&color=brightgreen)](https://github.com/Harshal350/Pokemon-Battle/graphs/contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](https://github.com/Harshal350/Pokemon-Battle/pulls)
 
 </div>
 
@@ -424,7 +424,7 @@ sublicense, and/or sell copies of this project with proper attribution.
 <!--                    ACKNOWLEDGEMENTS                          -->
 <!-- ============================================================ -->
 
-##Acknowledgements
+## 🙌 Acknowledgements
 
 - 🎮 **Nintendo & Game Freak** — For creating the legendary Pokémon universe
 - 🎨 **PokeAPI** — For Pokémon data and sprite resources ([pokeapi.co](https://pokeapi.co))
