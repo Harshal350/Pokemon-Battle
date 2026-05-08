@@ -204,7 +204,7 @@ open index.html
 ## 🎮 How To Play
 
 <div align="center">
-<img src="https://placehold.co/700x120/1a1a2e/FFD700?text=HOW+TO+PLAY" alt="How To Play" width="700" />
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/1st%20Screen.png" alt="How To Play" width="700" />
 </div>
 
 <br>
@@ -230,12 +230,12 @@ open index.html
 | `Mouse Click` | Select Pokémon / Choose Attack |
 | `Enter` | Confirm selection |
 | `Escape` | Pause / Return to menu |
-| `R` | Restart the battle |
-| `M` | Toggle background music 🎵 |
+| `WASD` | SELECT OPTIONS FRO PLAYER 1 |
+| `ARROW KEYS ` | SELECT OPTION FOR PLAYER 2 |
 | `S` | Toggle sound effects 🔊 |
 | `F` | Toggle fullscreen 🖥️ |
 
-> 💡 **Pro Tip:** Pay attention to your Pokémon's type — type advantages deal **2× damage!**
+
 
 ---
 
@@ -248,22 +248,22 @@ open index.html
 <div align="center">
 
 ### 🏠 Main Menu
-<img src="https://placehold.co/750x420/1a1a2e/FFD700?text=🏠+Main+Menu+Screenshot" alt="Main Menu" width="750" />
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/1st%20Screen.png" alt="Main Menu" width="750" />
 
 <br>
 
 ### ⚔️ Battle Screen
-<img src="https://placehold.co/750x420/16213e/FF6B6B?text=⚔️+Battle+Screen+Screenshot" alt="Battle Screen" width="750" />
+<img src="" alt="Battle Screen" width="750" />
 
 <br>
 
 ### 💥 Attack Animation
-<img src="https://placehold.co/750x420/0f3460/FFD700?text=💥+Attack+Animation+Screenshot" alt="Attack Animation" width="750" />
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/QUESTION.png" alt="Attack Animation" width="750" />
 
 <br>
 
 ### 🏆 Victory Screen
-<img src="https://placehold.co/750x420/1a1a2e/4CAF50?text=🏆+Victory+Screen+Screenshot" alt="Victory Screen" width="750" />
+<img src="https://github.com/Harshal350/Pokemon-Battle/blob/main/ASSETS/WINNER%20SCREEN.png" alt="Victory Screen" width="750" />
 
 </div>
 
@@ -363,7 +363,7 @@ git push origin feature/AmazingFeature
 
 ### Contribution Guidelines
 
-- 🐛 **Bug Reports** → Use the [Issues](https://github.com/Harshal350/Pokemon-Battle/issues) tab
+
 - 💡 **Feature Requests** → Tag your issue with `enhancement`
 - 🎨 **Code Style** → Follow the existing code style and naming conventions
 - 📝 **Commits** → Use descriptive commit messages with emojis *(e.g., `🐛 Fix health bar overflow`)*
