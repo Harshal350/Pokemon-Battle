@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokémon Battle</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Global background canvas -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Battle intro: cards + title in one frame (match start only) -->
+<div id="battle-intro-overlay" class="battle-intro-overlay" aria-hidden="true">
+  <div class="battle-intro-scanline"></div>
+  <div class="battle-intro-sweep"></div>
+  <div class="battle-intro-burst"></div>
+  <div class="battle-intro-ground"></div>
+  <div class="battle-intro-frame">
+    <!-- Curved SVG "BATTLE START!" arc — centered above both cards -->
+    <svg id="battle-intro-title" class="battle-intro-title" viewBox="0 0 560 60" xmlns="http://www.w3.org/2000/svg"
+      style="display:block;width:clamp(300px,90%,560px);height:60px;margin:0 auto 6px;pointer-events:none;">
+      <defs>
+        <path id="arcPath" d="M 40,55 Q 280,0 520,55"/>
+        <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ffd700"/>
+          <stop offset="40%" stop-color="#ff8c00"/>
+          <stop offset="70%" stop-color="#ff4466"/>
+          <stop offset="100%" stop-color="#7c3aed"/>
+        </linearGradient>
+      </defs>
+      <text font-family="'Press Start 2P', monospace" font-size="20" fill="url(#arcGrad)" filter="url(#biGlow2)" letter-spacing="2" text-anchor="middle">
+        <textPath href="#arcPath" startOffset="50%">⚔ BATTLE START! ⚔</textPath>
+      </text>
+      <filter id="biGlow2">
+        <feGaussianBlur stdDeviation="3" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </svg>
+    <div class="battle-intro-cards">
+      <div class="pk-battle-card pk-battle-p1" id="bi-p1"></div>
+      <div class="pk-battle-vs">VS</div>
+      <div class="pk-battle-card pk-battle-p2" id="bi-p2"></div>
+    </div>
+    <div class="battle-intro-sub" id="battle-intro-sub">GET READY</div>
+  </div>
+</div>
+<div id="sudden-death-overlay" class="sd-overlay" aria-hidden="true">
+  <div class="sd-bg"></div>
+  <div class="sd-inner">
+    <div class="sd-lightning">⚡</div>
+    <div class="sd-title">SUDDEN DEATH</div>
+    <div class="sd-sub">One question decides it all · faster lock wins if both correct · draw if both miss</div>
+  </div>
+</div>
+
+<!-- ═══════════ PIN LOCK OVERLAY ═══════════ -->
+<div id="pin-overlay">
+  <div class="pin-card">
+    <div class="pin-lock-wrap">
+      <div class="pin-orbit pin-orbit-1"></div>
+      <div class="pin-orbit pin-orbit-2"></div>
+      <div class="pin-orbit pin-orbit-3"></div>
+      <div class="pin-lock-icon" id="pin-lock-icon">🔒</div>
+    </div>
+    <div class="pin-title">ACCESS RESTRICTED</div>
+    <div class="pin-subtitle">Type PIN on keyboard · Esc to cancel</div>
+    <div class="pin-dots" id="pin-dots">
+      <div class="pin-dot" id="pd0"></div>
+      <div class="pin-dot" id="pd1"></div>
+      <div class="pin-dot" id="pd2"></div>
+      <div class="pin-dot" id="pd3"></div>
+      <div class="pin-dot" id="pd4"></div>
+      <div class="pin-dot" id="pd5"></div>
+    </div>
+    <div class="pin-error-msg" id="pin-error">INCORRECT PIN — TRY AGAIN</div>
+    <div class="pin-kbd-hint">
+      <span class="pin-kbd-key">A–Z</span>
+      <span class="pin-kbd-sep">·</span>
+      <span class="pin-kbd-key">0–9</span>
+      <span class="pin-kbd-sep">·</span>
+      <span class="pin-kbd-key">@</span>
+      <span class="pin-kbd-sep">·</span>
+      <span class="pin-kbd-key">⌫</span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ═══════════ INTRO ═══════════ -->
+<div id="intro-screen" class="screen active">
+  <div class="intro-logo">⚡ POKÉMON<br>BATTLE ⚡</div>
+  <div class="intro-tagline">Tech Trivia · 2 Players · One Keyboard</div>
+
+  <div class="intro-stage">
+    <div class="intro-stage-bg"></div>
+    <div class="intro-stage-line"></div>
+    <div class="intro-stage-p1">
+      <div class="intro-mon-wrap" id="im1"></div>
+    </div>
+    <div class="intro-vs-badge">VS</div>
+    <div class="intro-stage-p2">
+      <div class="intro-mon-wrap" id="im2"></div>
+    </div>
+  </div>
+
+  <div class="pokeball-divider">
+    <div class="pokeball-icon"></div>
+  </div>
+
+  <div class="intro-menu">
+    <div class="intro-menu-row">
+      <button class="btn btn-gold" onclick="showScreen('level-screen')">▶ SELECT LEVEL</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- ═══════════ LEVEL SELECT ═══════════ -->
+<div id="level-screen" class="screen">
+
+  <!-- Floating Pokémon decorations — left column -->
+  <div id="lv-deco-left" style="position:absolute;left:0;top:0;bottom:0;width:130px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;pointer-events:none;z-index:1;padding:20px 0;"></div>
+  <!-- Floating Pokémon decorations — right column -->
+  <div id="lv-deco-right" style="position:absolute;right:0;top:0;bottom:0;width:130px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;pointer-events:none;z-index:1;padding:20px 0;"></div>
+
+  <div class="lv-header" style="position:relative;z-index:2;">
+    <div class="screen-title">SELECT LEVEL</div>
+    <div class="screen-sub">Choose your battlefield</div>
+  </div>
+  <div class="lv-containers-wrap" id="lv-containers-wrap" style="position:relative;z-index:2;"></div>
+  <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2;">
+    <button class="btn btn-ghost btn-sm" onclick="showScreen('intro-screen')">← BACK</button>
+  </div>
+</div>
+
+<!-- ═══════════ BUFFER MANAGER ═══════════ -->
+<div id="buffer-screen" class="screen">
+  <div class="buf-wrap" id="buf-wrap">
+
+    <!-- header row -->
+    <div class="buf-header">
+      <div class="buf-level-badge">
+        <div class="buf-level-icon" id="buf-lv-icon">🌐</div>
+        <div class="buf-level-info">
+          <div class="buf-level-name" id="buf-lv-name">LEVEL 1</div>
+          <div class="buf-level-count" id="buf-lv-count">0 QUESTIONS IN POOL</div>
+        </div>
+      </div>
+      <div class="buf-toolbar">
+        <button class="btn btn-ghost btn-sm" onclick="showScreen('level-screen')">← BACK</button>
+      </div>
+    </div>
+
+    <!-- question list -->
+    <div class="buf-list" id="buf-list">
+      <div class="buf-empty">NO QUESTIONS IN POOL</div>
+    </div>
+
+    <div style="padding-bottom:24px;"></div>
+  </div>
+</div>
+
+
+
+<!-- ═══════════ PICK ═══════════ -->
+<div id="pick-screen" class="screen">
+  <div class="screen-title">CHOOSE YOUR FIGHTER</div>
+  <div class="pk-arena">
+    <div class="pk-col">
+      <div class="pk-plbl p1">⬡ PLAYER 1</div>
+      <div class="pk-grid" id="pg1"></div>
+      <div class="pk-prev p1" id="pp1">— Select Fighter —</div>
+    </div>
+    <div class="pk-divider"></div>
+    <div class="pk-col">
+      <div class="pk-plbl p2">PLAYER 2 ⬡</div>
+      <div class="pk-grid" id="pg2"></div>
+      <div class="pk-prev p2" id="pp2">— Select Fighter —</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:16px;margin-top:8px;flex-wrap:wrap;justify-content:center;align-items:center;">
+    <div style="font-family:'Press Start 2P',monospace;font-size:7px;color:#3a3a5c;text-align:center;line-height:1.8;">
+      <span style="color:var(--p1);">P1:</span> A/D/W/S = move &nbsp;·&nbsp; SPACE = pick
+      &nbsp;&nbsp;
+      <span style="color:var(--p2);">P2:</span> ←/→/↑/↓ = move &nbsp;·&nbsp; ENTER = pick
+    </div>
+  </div>
+  <div style="display:flex;gap:12px;margin-top:8px;">
+    <button class="btn btn-ghost btn-sm" onclick="showScreen('level-screen')">← BACK</button>
+    <button class="btn btn-gold" id="bat-btn" onclick="startBattle()" disabled>⚔ BATTLE!</button>
+  </div>
+</div>
+
+<!-- ═══════════ GAME ═══════════ -->
+<div id="game-screen" class="screen">
+  <div class="arena" id="arena">
+    <!-- Persistent arena particle canvas (behind mons) -->
+    <canvas id="arena-bg-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;"></canvas>
+    <!-- Center energy divider -->
+    <div class="arena-center-vortex" id="arena-vortex"></div>
+    <!-- Big countdown number -->
+    <div id="arena-countdown"></div>
+    <div class="p-side s1" id="s1">
+      <div class="mon-glow"></div>
+      <!-- Ground platform -->
+      <div class="ground-platform gp1"></div>
+      <div class="hp-wrap">
+        <div class="hp-top">
+          <span class="hp-nm p1">PLAYER 1</span>
+          <span class="hp-n" id="h1n">100<span style="color:#3a3a5c;">/</span>100</span>
+        </div>
+        <div class="hp-bar-outer"><div class="hp-fill hp-high" id="h1f" style="width:100%"></div></div>
+        <div class="hp-ticks" id="h1t"></div>
+      </div>
+      <div class="mon-stage">
+        <div class="mon-svg idle" id="m1"></div>
+        <div class="aura-ring" id="ar1"></div>
+        <div class="shockwave" id="sw1"></div>
+      </div>
+      <div class="st-bdg" id="b1"></div>
+      <div class="hflash hf-p1" id="f1"></div>
+    </div>
+    <div class="p-side s2" id="s2">
+      <div class="mon-glow"></div>
+      <!-- Ground platform -->
+      <div class="ground-platform gp2"></div>
+      <div class="hp-wrap">
+        <div class="hp-top">
+          <span class="hp-nm p2">PLAYER 2</span>
+          <span class="hp-n" id="h2n">100<span style="color:#3a3a5c;">/</span>100</span>
+        </div>
+        <div class="hp-bar-outer"><div class="hp-fill hp-high" id="h2f" style="width:100%"></div></div>
+        <div class="hp-ticks" id="h2t"></div>
+      </div>
+      <div class="mon-stage">
+        <div class="mon-svg idle" id="m2"></div>
+        <div class="aura-ring" id="ar2"></div>
+        <div class="shockwave" id="sw2"></div>
+      </div>
+      <div class="st-bdg" id="b2"></div>
+      <div class="hflash hf-p2" id="f2"></div>
+    </div>
+    <canvas id="proj-canvas"></canvas>
+  </div>
+
+  <div class="g-div">
+    <div class="r-lbl" id="rlbl">ROUND 1/10</div>
+    <div class="t-track"><div class="t-fill" id="tfill"></div></div>
+    <div class="r-lbl" id="slbl">P1: 0 | P2: 0</div>
+    <button class="music-btn" id="music-btn" onclick="toggleMusic()">♪ BGM</button>
+  </div>
+
+<!-- Lightning overlay -->
+<div class="lightning-overlay" id="lightning-overlay"></div>
+
+  <div class="bat-bot">
+    <div class="q-pan qp1" id="qp1">
+      <div class="q-pan-border"></div>
+      <div class="q-tag p1">◀ PLAYER 1 · WASD + SPACE</div>
+      <div class="q-txt" id="qt1">Loading...</div>
+      <div class="q-opts" id="qo1"></div>
+      <div class="q-ctrl">W A S D = navigate &nbsp;·&nbsp; SPACE = confirm</div>
+      <div class="ans-ind ai1" id="ai1">✓ LOCKED IN!</div>
+    </div>
+    <div class="q-pan qp2" id="qp2">
+      <div class="q-pan-border"></div>
+      <div class="q-tag p2">PLAYER 2 · ARROWS + ENTER ▶</div>
+      <div class="q-txt" id="qt2">Loading...</div>
+      <div class="q-opts" id="qo2"></div>
+      <div class="q-ctrl">↑ ↓ ← → = navigate &nbsp;·&nbsp; ENTER = confirm</div>
+      <div class="ans-ind ai2" id="ai2">✓ LOCKED IN!</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ RESULT ═══════════ -->
+<div id="res-overlay">
+  <canvas id="res-bg-canvas"></canvas>
+  <div class="conf-wrap" id="conf-wrap"></div>
+
+  <div class="res-card" id="res-card">
+    <div class="res-tag" id="res-tag">BATTLE OVER</div>
+    <div class="res-rule"></div>
+
+    <div class="res-mon-wrap" id="res-mon-wrap">
+      <div class="res-mon-glow"></div>
+      <div class="res-mon-disc"></div>
+      <div class="res-mon-orbit"></div>
+      <div class="res-mon" id="res-mon"></div>
+    </div>
+
+    <div class="res-player-lbl" id="res-player-lbl">PLAYER 1</div>
+    <div class="res-title" id="res-title">WINS!</div>
+    <div class="res-subtitle" id="res-subtitle">PIKACHU · ELECTRIC</div>
+
+    <div class="res-stats-wrap" id="res-stats"></div>
+    <div class="res-rule-bottom"></div>
+
+    <div class="res-btns" id="res-btns">
+      <button class="btn btn-gold" onclick="playAgain()">▶ PLAY AGAIN</button>
+      <button class="btn btn-ghost btn-sm" onclick="goHome()">⌂ HOME</button>
+    </div>
+  </div>
+</div>
+
+<!-- Round Result Announcement (winner OR tie) -->
+<div id="round-result">
+  <div class="rr-backdrop"></div>
+  <canvas id="rr-celebrate-canvas"></canvas>
+  <div id="rr-emoji-rain"></div>
+  <div class="rr-tie-split" id="rr-tie-split"></div>
+  <div class="rr-card" id="rr-card">
+    <!-- Decorative rings -->
+    <div class="rr-starburst"></div>
+    <div class="rr-ring rr-ring1" style="width:200px;height:200px;"></div>
+    <div class="rr-ring rr-ring2" style="width:200px;height:200px;"></div>
+    <div class="rr-ring rr-ring3" style="width:200px;height:200px;"></div>
+    <!-- Battle cry above card -->
+    <div class="rr-battlecry" id="rr-battlecry">⚡ CRITICAL HIT! ⚡</div>
+    <!-- Card content -->
+    <div class="rr-ball" id="rr-ball">⚡</div>
+    <div class="rr-headline" id="rr-headline">PLAYER 1 WINS<br>THE ROUND!</div>
+    <div class="rr-line"></div>
+    <div class="rr-sub" id="rr-sub">Pikachu scored a critical hit!</div>
+    <div class="rr-dmg" id="rr-dmg">-20 HP</div>
+    <div class="rr-line"></div>
+    <div class="rr-correct-wrap">
+      <div class="rr-correct-lbl">CORRECT ANSWER</div>
+      <div class="rr-correct-ans" id="rr-correct-ans">—</div>
+    </div>
+    <div class="rr-countdown" id="rr-countdown">
+      <div class="rr-dot active" id="rrd0"></div>
+      <div class="rr-dot active" id="rrd1"></div>
+      <div class="rr-dot active" id="rrd2"></div>
+    </div>
+  </div>
+</div>
+
+<div class="r-trans" id="rtrans">
+  <div class="r-trans-inner">
+    <span class="r-trans-txt" id="rtxt"></span>
+    <div class="r-trans-sub" id="rtxtsub"></div>
+  </div>
+</div>
+
+<!-- ═══════════ PAUSE ═══════════ -->
+<div id="pause-overlay">
+  <div class="pause-title">⏸ PAUSED</div>
+  <div class="pause-sub">PRESS ESC TO RESUME</div>
+  <div class="pause-score-wrap" id="pause-scores"></div>
+  <div class="pause-btns">
+    <button class="btn btn-gold" onclick="resumeGame()">▶ RESUME</button>
+    <button class="btn btn-ghost btn-sm" onclick="requirePin(quitToMenu)">⌂ QUIT TO MENU</button>
+  </div>
+  <div class="pause-hint">ROUND <span id="pause-round">1</span> OF <span id="pause-total">10</span></div>
+</div>
+
+<script src="js/pokemon-data.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/bg-canvas.js"></script>
+<script src="js/state-and-lock.js"></script>
+<script src="js/ui-screens.js"></script>
+<script src="js/pick-screen.js"></script>
+<script src="js/battle-setup.js"></script>
+<script src="js/battle-canvas.js"></script>
+<script src="js/battle-ui.js"></script>
+<script src="js/keyboard.js"></script>
+<script src="js/battle-logic.js"></script>
+</body></html>
