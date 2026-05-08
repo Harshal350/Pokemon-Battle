@@ -21,7 +21,7 @@
 
 <br>
 
-[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)](https://github.com)
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red?style=for-the-badge)](https://github.com//Harshal350)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -29,7 +29,7 @@
 
 <br>
 
-[![Stars](https://img.shields.io/github/stars/yourusername/pokemon-battle-game?style=social)](https://github.com/yourusername/pokemon-battle-game/stargazers)
+[![Stars](https://img.shields.io/github/stars/yourusername/pokemon-battle-game?style=social)](https://github.com/Harshal350/pokemon-battle-game/stargazers)
 [![Forks](https://img.shields.io/github/forks/yourusername/pokemon-battle-game?style=social)](https://github.com/yourusername/pokemon-battle-game/network/members)
 [![Issues](https://img.shields.io/github/issues/yourusername/pokemon-battle-game?color=red)](https://github.com/yourusername/pokemon-battle-game/issues)
 [![Last Commit](https://img.shields.io/github/last-commit/yourusername/pokemon-battle-game?color=brightgreen)](https://github.com/yourusername/pokemon-battle-game/commits)
@@ -407,15 +407,14 @@ sublicense, and/or sell copies of this project with proper attribution.
 
 <img src="https://placehold.co/120x120/1a1a2e/FFD700?text=👤" width="120" style="border-radius:50%;" alt="Developer Avatar"/>
 
-### Your Name Here
+### Harshal Mahadik
 
 *Full-Stack Developer | Game Enthusiast | Pokémon Trainer* 🎮
 
-[![Portfolio](https://img.shields.io/badge/🌐%20Portfolio-1a1a2e?style=for-the-badge)](https://yourportfolio.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourprofile)
-[![GitHub](https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/yourhandle)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
+[![Portfolio](https://img.shields.io/badge/🌐%20Portfolio-1a1a2e?style=for-the-badge)](https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fharshal-porfolio.netlify.app%2F&urlhash=tP3d&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf0riawTkT8%2BT3yQ71UlX9g%3D%3D)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harshal-mahadik-5a14103a4/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf0riawTkT8%2BT3yQ71UlX9g%3D%3D)
+[![GitHub](https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Harshal350)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshalmahadik100@gmail.com)
 
 </div>
 
@@ -425,7 +424,7 @@ sublicense, and/or sell copies of this project with proper attribution.
 <!--                    ACKNOWLEDGEMENTS                          -->
 <!-- ============================================================ -->
 
-## 🙏 Acknowledgements
+##Acknowledgements
 
 - 🎮 **Nintendo & Game Freak** — For creating the legendary Pokémon universe
 - 🎨 **PokeAPI** — For Pokémon data and sprite resources ([pokeapi.co](https://pokeapi.co))
@@ -443,11 +442,7 @@ sublicense, and/or sell copies of this project with proper attribution.
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=radical&hide_border=true&bg_color=1a1a2e&title_color=FFD700&icon_color=FF6B6B&text_color=ffffff)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=radical&hide_border=true&bg_color=1a1a2e&title_color=FFD700&text_color=ffffff)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=radical&hide_border=true&background=1a1a2e&ring=FFD700&fire=FF6B6B&currStreakLabel=FFD700)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Harshal350&show_icons=true&theme=radical&hide_border=true&bg_color=1a1a2e&title_color=FFD700&icon_color=FF6B6B&text_color=ffffff)
 
 </div>
 
@@ -478,7 +473,7 @@ sublicense, and/or sell copies of this project with proper attribution.
 ⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡
 ```
 
-Made with ❤️ and lots of ☕ by [Your Name](https://github.com/yourusername)
+Made with ❤️ and lots of ☕ by [Harshal Mahadik](https://github.com/Harshal350)
 
 *© 2025 Pokémon Battle Game — MIT Licensed*
 
