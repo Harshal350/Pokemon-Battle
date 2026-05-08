@@ -8,15 +8,9 @@ let pinCallback=null;
 let pinAttempts=0;
 
 function requirePin(cb){
-  pinCallback=cb;
-  pinBuffer='';
-  pinAttempts=0;
-  updatePinDots();
-  document.getElementById('pin-error').classList.remove('show');
-  document.getElementById('pin-lock-icon').textContent='🔒';
-  document.getElementById('pin-lock-icon').classList.remove('unlock');
-  document.getElementById('pin-overlay').classList.add('show');
+  if (cb) cb();
 }
+
 
 function closePinOverlay(){
   document.getElementById('pin-overlay').classList.remove('show');
