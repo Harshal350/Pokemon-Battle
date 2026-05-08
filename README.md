@@ -438,8 +438,7 @@ sublicense, and/or sell copies of this project with proper attribution.
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Harshal350&show_icons=true&theme=radical&hide_border=true&bg_color=1a1a2e&title_color=FFD700&icon_color=FF6B6B&text_color=ffffff)
-
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Harshal350&show_icons=true&theme=tokyonight&count_private=true)
 </div>
 
 ---
