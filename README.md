@@ -411,7 +411,7 @@ sublicense, and/or sell copies of this project with proper attribution.
 
 *Full-Stack Developer | Game Enthusiast | Pokémon Trainer* 🎮
 
-[![Portfolio](https://img.shields.io/badge/🌐%20Portfolio-1a1a2e?style=for-the-badge)](https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fharshal-porfolio.netlify.app%2F&urlhash=tP3d&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf0riawTkT8%2BT3yQ71UlX9g%3D%3D)
+[![Portfolio](https://img.shields.io/badge/🌐%20Portfolio-1a1a2e?style=for-the-badge)](https://harshal-porfolio.netlify.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harshal-mahadik-5a14103a4/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bf0riawTkT8%2BT3yQ71UlX9g%3D%3D)
 [![GitHub](https://img.shields.io/badge/GitHub-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Harshal350)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshalmahadik100@gmail.com)
