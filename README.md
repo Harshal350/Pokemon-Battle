@@ -189,7 +189,7 @@ open index.html
 
 > No installation needed! Just click below ⬇️
 
-[![▶ Play Live Demo](https://img.shields.io/badge/▶%20Play%20Live%20Demo-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://Harshal350.github.io/Pokemon-Battle)
+[![▶ Play Live Demo](https://img.shields.io/badge/▶%20Play%20Live%20Demo-brightgreen?style=for-the-badge&logo=googlechrome&logoColor=white)](https://harshal350.github.io/Pokemon-Battle/)
 
 ---
 
